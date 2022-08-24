@@ -1,0 +1,608 @@
+{
+ "geoms": {
+ "geom1_tallrect_precip": {
+ "geom": "tallrect",
+"classed": "geom1_tallrect_precip",
+"aes": {
+ "xmin": "min.day",
+"xmax": "max.day",
+"clickSelects": "week" 
+},
+"params": {
+ "colour": "#000000",
+"fill": "#000000",
+"alpha":    0.1 
+},
+"subset_order": [],
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects": "POSIXct-POSIXt",
+"PANEL": "integer",
+"group": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [],
+"nextgeom": "geom2_rect_precip" 
+},
+"geom2_rect_precip": {
+ "geom": "rect",
+"classed": "geom2_rect_precip",
+"aes": {
+ "xmin": "min.day",
+"xmax": "max.day",
+"ymin": "0",
+"ymax": "precip.median",
+"clickSelects": "week" 
+},
+"params": [],
+"subset_order": [],
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"ymin": "numeric",
+"ymax": "numeric",
+"clickSelects": "POSIXct-POSIXt",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [],
+"nextgeom": "geom3_point_precip" 
+},
+"geom3_point_precip": {
+ "geom": "point",
+"classed": "geom3_point_precip",
+"aes": {
+ "x": "day",
+"y": "precip.max" 
+},
+"params": {
+ "na.rm": false,
+"colour": "#000000",
+"size":      4,
+"fill": "transparent" 
+},
+"subset_order": [],
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [],
+"nextgeom": "geom4_text_precip" 
+},
+"geom4_text_precip": {
+ "geom": "text",
+"classed": "geom4_text_precip",
+"aes": {
+ "x": "ymd(\"2015-04-15\")",
+"y": "16",
+"label": "label",
+"showSelected": "week" 
+},
+"params": {
+ "parse": false 
+},
+"subset_order": [
+ "showSelected" 
+],
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "factor",
+"showSelected": "POSIXct-POSIXt",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [
+ "showSelected" 
+] 
+},
+"geom5_path_stations": {
+ "geom": "path",
+"classed": "geom5_path_stations",
+"aes": {
+ "x": "long",
+"y": "lat",
+"group": "group" 
+},
+"params": {
+ "lineend": "butt",
+"linejoin": "round",
+"linemitre":      1,
+"na.rm": false,
+"colour": "#BEBEBE",
+"size":    0.5 
+},
+"subset_order": [],
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "integer",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [
+ "group" 
+],
+"nextgeom": "geom6_polygon_stations" 
+},
+"geom6_polygon_stations": {
+ "geom": "polygon",
+"classed": "geom6_polygon_stations",
+"aes": {
+ "x": "long",
+"y": "lat",
+"group": "group" 
+},
+"params": {
+ "fill": "#BEBEBE",
+"size":    0.5 
+},
+"subset_order": [],
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "integer",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [
+ "group" 
+],
+"nextgeom": "geom7_path_stations" 
+},
+"geom7_path_stations": {
+ "geom": "path",
+"classed": "geom7_path_stations",
+"aes": {
+ "x": "long",
+"y": "lat",
+"group": "group" 
+},
+"params": {
+ "lineend": "butt",
+"linejoin": "round",
+"linemitre":      1,
+"na.rm": false 
+},
+"subset_order": [],
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"group": "integer",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": 1,
+"total": 1,
+"chunk_order": [],
+"nest_order": [
+ "group" 
+],
+"nextgeom": "geom8_point_stations" 
+},
+"geom8_point_stations": {
+ "geom": "point",
+"classed": "geom8_point_stations",
+"aes": {
+ "x": "longitude",
+"y": "latitude",
+"showSelected": "week",
+"tooltip": "station.name",
+"fill": "sqrt(precip.wk)" 
+},
+"params": {
+ "na.rm": false,
+"colour": "#000000",
+"size":      4,
+"chunk.vars": [
+ "week" 
+] 
+},
+"subset_order": [],
+"types": {
+ "fill": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelected": "POSIXct-POSIXt",
+"tooltip": "factor",
+"PANEL": "integer" 
+},
+"PANEL": 1,
+"chunks": {
+ "2015-01-01": 1,
+"2015-01-08": 2,
+"2015-01-15": 3,
+"2015-01-22": 4,
+"2015-01-29": 5,
+"2015-02-05": 6,
+"2015-02-12": 7,
+"2015-02-19": 8,
+"2015-02-26": 9,
+"2015-03-05": 10,
+"2015-03-12": 11,
+"2015-03-19": 12,
+"2015-03-26": 13,
+"2015-04-02": 14,
+"2015-04-09": 15,
+"2015-04-16": 16,
+"2015-04-23": 17,
+"2015-04-30": 18,
+"2015-05-07": 19,
+"2015-05-14": 20,
+"2015-05-21": 21,
+"2015-05-28": 22,
+"2015-06-04": 23,
+"2015-06-11": 24,
+"2015-06-18": 25,
+"2015-06-25": 26,
+"2015-07-02": 27,
+"2015-07-09": 28,
+"2015-07-16": 29,
+"2015-07-23": 30,
+"2015-07-30": 31 
+},
+"total": 31,
+"chunk_order": [
+ "week" 
+],
+"nest_order": [] 
+} 
+},
+"selectors": {
+ "week": {
+ "selected": "2015-01-01",
+"type": "single",
+"update": [
+ "geom1_tallrect_precip",
+"geom2_rect_precip",
+"geom4_text_precip",
+"geom8_point_stations" 
+],
+"chunks": "week" 
+} 
+},
+"plots": {
+ "precip": {
+ "legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":      0,
+"right":      0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [      1 ],
+"height_proportion": [      1 ] 
+},
+"geoms": [
+ "geom1_tallrect_precip",
+"geom2_rect_precip",
+"geom3_point_precip",
+"geom4_text_precip" 
+],
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":    0.5,
+"linetype":      1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":    0.5,
+"linetype":      1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":    0.2,
+"linetype":      1,
+"lineend": "butt",
+"loc": {
+ "x": {
+ "Jan": 0.045455,
+"Feb": 0.17532,
+"Mar": 0.29263,
+"Apr": 0.4225,
+"May": 0.54818,
+"Jun": 0.67805,
+"Jul": 0.80373,
+"Aug": 0.9336 
+},
+"y": [
+ 0.045455,
+0.32955,
+0.61364,
+0.89773 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":    0.5,
+"linetype":      1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ 0.11039,
+0.23398,
+0.35756,
+0.48534,
+0.61311,
+0.74089,
+0.86866,
+0.99853 
+],
+"y": [
+ 0.1875,
+0.47159,
+0.75568 
+] 
+} 
+},
+"axis1": {
+ "x": {
+ "Jan": 0.045455,
+"Feb": 0.17532,
+"Mar": 0.29263,
+"Apr": 0.4225,
+"May": 0.54818,
+"Jun": 0.67805,
+"Jul": 0.80373,
+"Aug": 0.9336 
+},
+"xlab": [
+ "Jan",
+"Feb",
+"Mar",
+"Apr",
+"May",
+"Jun",
+"Jul",
+"Aug" 
+],
+"xrange": [ 1.4191e+09, 1.4398e+09 ],
+"xline": true,
+"xticks": true,
+"y": [
+ 0.045455,
+0.32955,
+0.61364,
+0.89773 
+],
+"ylab": [
+ "0",
+"5",
+"10",
+"15" 
+],
+"yrange": [   -0.8,   16.8 ],
+"yline": true,
+"yticks": true 
+},
+"xtitle": "",
+"xanchor": "middle",
+"xangle":      0,
+"ytitle": "Weekly Precipitation (in)",
+"yanchor": "end",
+"yangle":      0,
+"xlabs": [
+ "Jan",
+"Feb",
+"Mar",
+"Apr",
+"May",
+"Jun",
+"Jul",
+"Aug" 
+],
+"ylabs": [
+ "0",
+"5",
+"10",
+"15" 
+],
+"title": "Precipitation across Texas, 2015",
+"options": {
+ "width":    350,
+"height":    540 
+} 
+},
+"stations": {
+ "legend": {
+ "Precip (in)": {
+ "guide": "legend",
+"geoms": "point",
+"title": "Precip (in)",
+"vars": "show_fill",
+"legend_type": "fill",
+"entries": [
+ {
+ "pointfill": "#FFFFFF",
+"pointshape":     16,
+"pointcolour": "#000000",
+"pointsize":      4,
+"label": [      0 ] 
+},
+{
+ "pointfill": "#B1DBFF",
+"pointshape":     16,
+"pointcolour": "#000000",
+"pointsize":      4,
+"label": [      1 ] 
+},
+{
+ "pointfill": "#63B8FF",
+"pointshape":     16,
+"pointcolour": "#000000",
+"pointsize":      4,
+"label": [      4 ] 
+},
+{
+ "pointfill": "#4C8EC4",
+"pointshape":     16,
+"pointcolour": "#000000",
+"pointsize":      4,
+"label": [      9 ] 
+},
+{
+ "pointfill": "#36648B",
+"pointshape":     16,
+"pointcolour": "#000000",
+"pointsize":      4,
+"label": [     16 ] 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":      0,
+"right":      0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [      1 ],
+"height_proportion": [      1 ] 
+},
+"geoms": [
+ "geom5_path_stations",
+"geom6_polygon_stations",
+"geom7_path_stations",
+"geom8_point_stations" 
+],
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":    0.5,
+"linetype":      1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":    0.5,
+"linetype":      1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":    0.2,
+"linetype":      1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ 0.22799,
+0.50498,
+0.78198 
+],
+"y": [
+ 0.18701,
+0.4002,
+0.6134,
+0.82659 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":    0.5,
+"linetype":      1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ 0.089488,
+0.36648,
+0.64348,
+0.92047 
+],
+"y": [
+ 0.080409,
+0.2936,
+0.5068,
+0.71999,
+0.93319 
+] 
+} 
+},
+"axis1": {
+ "x": [
+ 0.22799,
+0.50498,
+0.78198 
+],
+"xrange": [ -107.29, -92.852 ],
+"xline": false,
+"xticks": false,
+"y": [
+ 0.18701,
+0.4002,
+0.6134,
+0.82659 
+],
+"yrange": [ 25.307, 37.033 ],
+"yline": false,
+"yticks": false 
+},
+"xtitle": "",
+"xanchor": "middle",
+"xangle":      0,
+"ytitle": "",
+"yanchor": "end",
+"yangle":      0,
+"xlabs": [],
+"ylabs": [],
+"title": "Weekly Precipitation",
+"options": {
+ "width":    600,
+"height":    540 
+} 
+} 
+} 
+}
